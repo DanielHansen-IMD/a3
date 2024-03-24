@@ -1,0 +1,14 @@
+{
+    "name": "Todo It",
+    "short_name": "Todo It",
+    "start_url": "/",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
+  
