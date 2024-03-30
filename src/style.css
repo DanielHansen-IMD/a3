@@ -1,3 +1,13 @@
 body {
+     background-color: #101010;
      font-family: sans-serif;
+     font-family: "Work Sans", sans-serif;
+     font-optical-sizing: auto;
+     font-style: normal;
+     margin: 2vw;
+}
+@media screen and (max-width: 550px) { 
+     body {
+          margin: 4vw;
+     }
 }
