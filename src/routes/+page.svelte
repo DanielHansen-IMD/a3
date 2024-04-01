@@ -1,4 +1,5 @@
 <script>
+     import { fly } from 'svelte/transition';
      import '../style.css';
      import { writable } from 'svelte/store';
      let todoList = writable([]);
@@ -53,7 +54,7 @@
 
      <ul>
           {#each $todoList as item, index}
-               <li class:done={item.done}>
+               <li transition:fly={{y: 15, duration: 200}} class:done={item.done}>
                     <input type="checkbox" bind:checked={item.done} on:change={updateList}>
                     <span class="text">{item.text}</span>
                     <span on:click={() => removeThis(index)} class="remove" role="button" tabindex="0">&times;</span>
@@ -117,6 +118,7 @@
           font-size: 1.2em;
           color: #f8f8f8;
           background-color:rgb(20, 153, 95);
+          cursor: pointer;
      }
      li {
           font-size: 1.3rem;
@@ -166,6 +168,7 @@
           border: none;
           border-radius: 50px;
           margin-left: 0.7em;
+          cursor: pointer;
      }
      .button-group .clear-list {
           background-color: #999;
